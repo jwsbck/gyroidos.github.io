@@ -8,7 +8,7 @@ order: 1
 * TOC
 {:toc}
 
-This section sums up the necessary steps to build trust\|me on different architectures.
+This section sums up the necessary steps to build GyroidOS on different architectures.
 For a detailed explanation of each build step please refer to the [build section](/build/build)
 and make sure [prerequisites](/build/build#prerequisites) have been met.
 
@@ -26,7 +26,7 @@ bitbake trustx-cml
 bitbake trustx-keytool
 ```
 
-In order to create a bootable installation medium for installing trust\|me on an internal disk,
+In order to create a bootable installation medium for installing GyroidOS on an internal disk,
 also execute the following command:
 ```
 bitbake multiconfig:installer:trustx-installer

@@ -22,10 +22,10 @@ Set other required keys, e.g., the KEK and PK. See [Secure Boot Configuration]({
 
 ## Boot into provisioning mode
 
-At the first boot, trust\|me automatically boots into a provisioning mode.
+At the first boot, GyroidOS automatically boots into a provisioning mode.
 In this mode, the virtualization layer exposes additional functionality to the core container via the control
 interface.
-At that time, the deployed trust\|me base system is equipped with the software signing trust anchor and is
+At that time, the deployed GyroidOS base system is equipped with the software signing trust anchor and is
 thus capable of starting the core container. In order to allow running other GuestOSes, you can add the GuestOS signing trust
 anchors to the certificate store in the virtualization layer (via the control interface). This allows the
 virtualization layer to verify any GuestOS that can be added to the system via the core container at any
@@ -43,7 +43,7 @@ or the token can be removed to use a Secure Element in future builds.
 
 ### Complete provisioning
 
-Reboot the system to complete the provisioning. During the next boot, the trust\|me base system no longer
+Reboot the system to complete the provisioning. During the next boot, the GyroidOS base system no longer
 boots into provisioning mode and can use the deployed certificates and tokens during operation.
 This means that the control interface available in the core container no longer exposes the provisioning
 functionality.
@@ -59,7 +59,7 @@ core containers and other deployed containers.
 Further, an initial softtoken with password `trustme` is generated.
 The token is used to wrap the encryption keys for container data and emulates a Secure
 Element (or other tamper-resistant key store).
-In future builds, trust\|me will allow storing these  keys in Secure Elements.
+In future builds, GyroidOS will allow storing these  keys in Secure Elements.
 At every container start, the softtoken's password must be provided via the core
 container to the virtualization layer, which unlocks the softtoken or Secure Element, respectively.
 

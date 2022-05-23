@@ -5,10 +5,10 @@ order: 1
 ---
 
 
-# Run trust\|me image in QEMU/KVM (x86-64)
+# Run GyroidOS image in QEMU/KVM (x86-64)
 - TOC
 {:toc}
-Before following these steps you need to create the partitioned trust\|me image as described in [Build]({{ "/" | absolute_url }}build/build)  
+Before following these steps you need to create the partitioned GyroidOS image as described in [Build]({{ "/" | absolute_url }}build/build)  
 or download a released image from Github.
 
 > **Current pre-built release image**: \\
@@ -18,7 +18,7 @@ or download a released image from Github.
 
 In first place, you need to install QEMU/KVM and OVMF UEFI.
 > **Note for Ubuntu users:** With the ovmf packet from the Ubuntu
-repositories the trustme image won't start.
+repositories the GyroidOS image won't start.
 Download the debian buster packet here: [packages.debian.org/buster/all/ovmf/download](https://packages.debian.org/buster/all/ovmf/download) and install it via dpkg.
 
 ```
@@ -31,7 +31,7 @@ mkfs.btrfs -L containers containers.btrfs
 ```
 > When running consecutive tests with different builds make sure you use  a clean "containers.btrfs" image each time!
 
-Now the trust\|me image can be booted as follows:   
+Now the GyroidOS image can be booted as follows:   
 ```
 kvm -m 4096 -bios OVMF.fd -serial mon:stdio \
     -device virtio-rng-pci \
@@ -42,7 +42,7 @@ kvm -m 4096 -bios OVMF.fd -serial mon:stdio \
 
 # Use TPM emulation
 
-This section describes the process of running trust\|me in KVM/QEMU connected to an emulated TPM2.0
+This section describes the process of running GyroidOS in KVM/QEMU connected to an emulated TPM2.0
 ([swtpm](https://github.com/stefanberger/swtpm)) which runs inside a Docker container.
 
 ## Build SW-TPM Docker
@@ -63,7 +63,7 @@ This creates a UNIX socket in the host's directory '/tmp/swtpmqemu/', which QEMU
 
 ## Run KVM/QEMU
 
-The following example runs a trust\|me image using the TPM emulator and enabling host-guest port forwarding in KVM:
+The following example runs a GyroidOS image using the TPM emulator and enabling host-guest port forwarding in KVM:
 
 ```
 kvm -m 4096 -bios OVMF.fd -serial mon:stdio \
@@ -126,7 +126,7 @@ signed. You will drop in an EFI shell. The setup is complete and you can close
 the QEMU instance.
 
 ## Run KVM/QEMU with Secure Boot
-Now start the trustme image as described above, however with the just
+Now start the GyroidOS image as described above, however with the just
 provisioned OVMF flash image.
 ```
 kvm -m 4096 -serial mon:stdio \
@@ -139,8 +139,8 @@ kvm -m 4096 -serial mon:stdio \
     -net nic -net user,hostfwd=tcp::8181-:8181,hostfwd=tcp::2323-:22 \
 ```
 
-If the trust\|me platform will not start and you find yourself in an EFI shell,
-This could be because the QEMU DISK with the trust\|me system was placed below
+If the GyroidOS platform will not start and you find yourself in an EFI shell,
+This could be because the QEMU DISK with the GyroidOS system was placed below
 the EFI shell in the boot order. You can fix this in the EFI setup by just
 exiting the EFI shell.
 In the OVMF Setup menu select:

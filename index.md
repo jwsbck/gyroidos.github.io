@@ -82,7 +82,7 @@ The GyroidOS software stack runs on following hardware platforms:
 |--|--------------------|----------|
 | x86 32/64 | Native Intel PC | UEFI Secure Boot |
 | x86 32/64 | Qemu | TianoCore (simulated UEFI secure boot and sTPM)|
-| ARM 64 | Xilinx Zynq ZCU104 | coming soon (Xilinx and Uboot Verified Boot) |
+| ARM 64 | Xilinx Zynq ZCU104 | unmaintained |
 | ARM 64 | Raspberry Pi3 | coming soon (Uboot Verified Boot) |
 | ARM 32 | Raspberry Pi2 | coming soon (Uboot Verified Boot) |
 | ARM 32 | Nexus 5/5X | no longer supported (legacy Android build) |

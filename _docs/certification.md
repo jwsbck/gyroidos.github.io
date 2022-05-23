@@ -8,12 +8,12 @@ order: 2
 - TOC
 {:toc}
 
-trust|me can be used to support different certification processes.
+GyroidOS can be used to support different certification processes.
 Some of the provided security features should allow to be used as TSF for Common Criteria certification
-with trust|me as part of the Target of Evaluation (TOE).
-As part of the trusted connector trust|me already got the IDS-ready label (Trust Profile) after having its implementation concept evaluated.
+with GyroidOS as part of the Target of Evaluation (TOE).
+As part of the trusted connector GyroidOS already got the IDS-ready label (Trust Profile) after having its implementation concept evaluated.
 
-Remember that we only describe the features which are supported by the mainline implementation of trust|me
+Remember that we only describe the features which are supported by the mainline implementation of GyroidOS
 (consisting of the container management layer daemon _cmld_, the smartcard and security helper daemon _scd_, the trusted platform module 2 helper daemon _tmp2d_)
 and the provided yocto based CML distribution, companioned by its reference c0 implementation trustx-coreos.
 
@@ -41,7 +41,7 @@ where the CML including its components cmld, tpm2d, scd as part of the Target of
 
 ## DIN SPEC 27070 - IDS-Specific Requirements
 Relevant IDS-specific requirements specified in the DIN SPEC 27070 \[[DE](https://www.beuth.de/de/technische-regel/din-spec-27070/319111044)\]
-\[[EN](https://internationaldataspaces.org/din-spec-27070/)\] which are fulfilled or supported by the mainline trust\|me software stack.
+\[[EN](https://internationaldataspaces.org/din-spec-27070/)\] which are fulfilled or supported by the mainline GyroidOS software stack.
 Since the IDS Component Certification Catalogue is slightly advanced to the standardized DIN SPEC, we refer to version 2.1.0 of the Component Certification Catalogue.
 
 |Criteria/Requirement|Implementation and components | State |
@@ -64,7 +64,7 @@ Since the IDS Component Certification Catalogue is slightly advanced to the stan
 | APS 01 - App signature			| Container Images are signed and the cmld verifies those signatures before starting the container | done |
 | APS 02 - App signature verification		| cmld verifies the signatures for all container images before installation (after download) and before each execution of the container. | done |
 | APS 04 - Requirements for the runtime environment  | RAM and CPU resources in container config, cmld sets kernel cgroups accordingly | done |
-| APS 05 - App installation			| Apps are independent trust\|me containers. | done |
+| APS 05 - App installation			| Apps are independent GyroidOS containers. | done |
 
 ## IDS / IEC 62443 Requirements
 Relevant IDS requirements (DIN SPEC 27070 / IDS Component Certification Catalog Version 2.1.0) which are also part of the IEC 62443-4-2.

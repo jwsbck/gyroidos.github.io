@@ -7,7 +7,7 @@ order: 5
 - TOC
 {:toc}
 
-trust|me containers can also be run natively on your host, using the hosted mode.
+GyroidOS containers can also be run natively on your host, using the hosted mode.
 This section describes how to run the hosted mode.
 These instructions have been tested and work on Debian 10 stable. 
 

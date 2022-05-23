@@ -8,7 +8,7 @@ order: 3
 - TOC
 {:toc}
 
-This page describes the process of creating a new guest OS to be used in trust\|me containers.
+This page describes the process of creating a new guest OS to be used in GyroidOS containers.
 It is possible to build a new guest OS using Yocto or by hand using a rootfs image. Both possibilities are described here.
 
 ## Using Yocto
@@ -26,7 +26,7 @@ In order to setup an environment for building guest operating systems only, foll
 * Initialize and synchronize the repo:
 
 ```
-repo init -u https://github.com/trustm3/trustme_main.git -b zeus -m yocto-generic-container.xml
+repo init -u https://github.com/trustm3/trustme_main.git -b dunfell -m yocto-generic-container.xml
 repo sync -j8
 ```
 
@@ -40,7 +40,7 @@ Currently supported architectures are: *x86*, *arm32*, and *arm64*.
 
 ### Create the image recipe
 
-Each guest operating system image has a corresponding Yocto recipe file, *<custom-image-name>.bb*. The trustme *meta-trustx* layer provides two standard image recipes:
+Each guest operating system image has a corresponding Yocto recipe file, *<custom-image-name>.bb*. The GyroidOS *meta-trustx* layer provides two standard image recipes:
 
 * A core container image recipe, *\<yocto workspace directory\>/meta-trustx/images/trustx-core.bb*
 * A service container image recipe, *\<yocto workspace directory\>/meta-trustx/images/trustx-service.bb*
@@ -75,7 +75,7 @@ bitbake multiconfig:container:trustx-<custom-image-name>
 
 The image and configuration files will be located at *tmp_container/deploy/images/<architecture>/trustx-guests/* and *tmp_container/deploy/images/<architecture>/trustx-configs/container/*
 
-If you are also building the core system from source, in order to include the new guest OS to your trust|\me distro, also rebuild the core system image:
+If you are also building the core system from source, in order to include the new guest OS to your GyroidOS distro, also rebuild the core system image:
 ```
 bitbake trustx-cml -cclean
 bitbake trustx-cml

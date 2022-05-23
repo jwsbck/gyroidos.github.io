@@ -10,7 +10,7 @@ order: 3
 
 This page describes how to setup the build environment for the trust\|me system.
 The instructions were tested on Debian Stretch (x86-64).
-You can either build trust\|me natively on your host or use a preconfigured, Docker-based build environment.
+You can either build GyroidOS natively on your host or use a preconfigured, Docker-based build environment.
 Choose the option that best fits your requirements.
 
 ## Docker-based build environment
@@ -42,7 +42,7 @@ cd ~/ws-yocto/trustme/build/yocto/docker
 
 ## Setup host natively
 
-The trust\|me build needs packages from main and contrib archive areas. If not already done so, enable contrib in your sources.list.
+The GyroidOS build needs packages from main and contrib archive areas. If not already done so, enable contrib in your sources.list.
 
 1. To setup your build host, install the following packages required for Yocto/Poky (see
 [Yocto reference manual](https://www.yoctoproject.org/docs/2.6.2/ref-manual/ref-manual.html#required-packages-for-the-build-host))

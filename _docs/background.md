@@ -6,6 +6,7 @@ order: 1
 
 # Background
 
+GyroidOS were formerly developed under the code name trust\|me, which stood for "trusted mobile equipment".
 Initially developed for mobile device, trust\|me sought to run multiple, systematically isolated Android instances on a
 single device. Motivated by the bring your own device problematic in enterprises, a prevalent use case was running a business
 and private Android instance on a single smartphone. Opposed to other approaches, trust\|me used OS-level
@@ -42,20 +43,20 @@ containerization solutions on the market. We target x86 and embedded Linux platf
 like Debian inside containers and neither requiring tedious OS modifications, massive hardware device
 virtualization nor a container foreground-background model.
 
-This makes trust\|me more lean, easier to maintain and easier to apply on a wide range of x86 and ARM
+This makes GyroidOS more lean, easier to maintain and easier to apply on a wide range of x86 and ARM
 platforms.
-As trust\|me was always developed as a security-centric solution, we designed a modular privileged
+As GyroidOS was always developed as a security-centric solution, we designed a modular privileged
 virtualization layer and moved all components, critical yet not necessarily required as part of this layer to
 a less privileged core container (e.g., update functionalities, remote management).
 Further, we target not only the separation of critical user space execution contexts, but also platform
 security. As a result, our code base supports features like full disk encryption, secure and measured boot with remote attestation
-using a TPM. We integrate a customizable PKI into trust\|me builds that allow not only kernel and module
+using a TPM. We integrate a customizable PKI into GyroidOS builds that allow not only kernel and module
 signing, but also signing the virtualization layer and all containers.
 We are also developing functionality for two-factor authentication to bind containers and their data
 encryption to Secure Elements, and for leveraging TEEs for storing cryptographic keys and executing ciphers
 within hardware-isolated boundaries.
 
 A detailed introduction to the core concepts of the OS-Level virtualization
-and separation of privileged instances in trust\|me is provided in [this slideset](https://github.com/trustm3/trustme_main/raw/master/doc/trustme.pdf).
+and separation of privileged instances in GyroidOS is provided in [this slideset](https://github.com/trustm3/trustme_main/raw/master/doc/trustme.pdf).
 The document is centered around the legacy Android-based version of trust\|me, however the
 core concepts apply likewise to the current version.

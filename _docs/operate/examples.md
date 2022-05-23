@@ -14,7 +14,7 @@ confidential debian system inside a container.
 In order to achieve that, we use the setup mode for running a container instance of debos.
 
 ### Prerequisites
-* a running (deployed) trust\|me system.
+* a running (deployed) GyroidOS system.
 * configured internet access in core0 (default is dhcp on eth0)
 * we assume a standard password for usertoken "trustme"
 * an installed debos image in that system   
@@ -86,7 +86,7 @@ control start debian1 --key=trustme
 > **Experimental**, the converter may not work for every image on dockerhub!
 
 ### Prerequisites
-* a running (deployed) trust\|me system.
+* a running (deployed) GyroidOS system.
 * an installed docker-convertos image in that system   
   You can verify this by checking:
 

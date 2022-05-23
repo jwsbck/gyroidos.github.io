@@ -172,7 +172,7 @@ usb_configs {
 ```
 
 ### Parameter fifos
-The trust|me architecture enables the usage of unidrectional communication channels which can be used to transfer information from c0 to other containers but inhibits any information leakage from the containers.
+The GyroidOS architecture enables the usage of unidrectional communication channels which can be used to transfer information from c0 to other containers but inhibits any information leakage from the containers.
 This feature can be used e.g. to inject external information on network state, such as DNS entries, from c0 into a container.
 The CML creates one Linux fifo for each ```fifos``` entry which are accessible under ```/dev/cfifos```.
 

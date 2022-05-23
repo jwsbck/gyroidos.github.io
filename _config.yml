@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: trust|me
+title: GyroidOS
 url: "https://github.com/trustm3"
 baseurl: ""
 google_analytics_key:
@@ -10,8 +10,8 @@ show_full_navigation: true
 kramdown:
   parse_block_html: true
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: img/trustme-logo.png
-description: This is the trust|me project documentation
+logo: img/gyroidos-logo.png
+description: This is the GyroidOS project documentation
 githuborg: "https://github.com/trustm3"
 repository: trustme_main
 release_tag: v0.1.1

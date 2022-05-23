@@ -18,16 +18,16 @@ Note that several containers may run the same operating system.
 Both container and OS configuration file formats are composed of several ```key: value``` lines.
 A detailed description of the container configuration can be found [here](/operate/container_config); the guestOS configuration is described [here](/operate/guestos_config).
 
-## Basic trust|me operation
+## Basic GyroidOS operation
 
-trust|me is operated using a socket-based interface. This interface is used by the *control*
-command-line tool, which is installed together with trust|me. It is available from the
+GyroidOS is operated using a socket-based interface. This interface is used by the *control*
+command-line tool, which is installed together with GyroidOS. It is available from the
 privileged container (core0) and the debugging shell of CML.
 This tool is just for basic usage and demonstration of the control interface.
 For productive use cases an implementation of the protobuf-based control interface should be
 used, for instance in a web-based UI.
 
-The *control* tool allows administration and configuration of the trust|me platform, such as creating and starting containers, running a given command inside a container, etc.
+The *control* tool allows administration and configuration of the GyroidOS platform, such as creating and starting containers, running a given command inside a container, etc.
 The available actions are listed below.
 
 Usually, container specific commands use the container-uuid as parameter to identify the

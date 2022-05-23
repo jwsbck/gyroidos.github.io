@@ -4,18 +4,18 @@ category: Build
 order: 2
 ---
 
-# Build trust|me
+# Build GyroidOS
 - TOC
 {:toc}
 
-The steps to build trust\|me are very similar for each flavour of the platform such as core, IDS, etc. The difference between these flavours are the containers installed on trust\|me. In order to build the trust\|me flavour you're interested in, select the appropriate containers in [the corresponding build step](#include-containers-to-trustme-image).
-If you just want to try out trust\|me the core flavour is the best option for you.
+The steps to build GyroidOS are very similar for each flavour of the platform such as core, IDS, etc. The difference between these flavours are the containers installed on GyroidOS. In order to build the GyroidOS flavour you're interested in, select the appropriate containers in [the corresponding build step](#include-containers-to-gyroidos-image).
+If you just want to try out GyroidOS the core flavour is the best option for you.
 
 > Some build steps are architecture / device dependent. These steps are only necessary for that specific architecture / device.
 
 ## Prerequisites
 
-The following prerequisites are necessary for **all** trust\|me flavours. Please make sure your build host meets these requirements:
+The following prerequisites are necessary for **all** GyroidOS flavours. Please make sure your build host meets these requirements:
    * Build host configuration as described in section [Setup Host](/setup_host)
    * Sufficient hard disk space, at least 100 GB
    * Sufficient RAM. We tested the build on a VM having 4 GB RAM. However, a build host with less RAM should also work.
@@ -73,9 +73,9 @@ bitbake multiconfig:pmu:pmu-firmware
 ```
 -->
 
-## Include containers to trust\|me image
-These commands install guest operating systems and containers (e.g. the IDS container) to your trust\|me platform.
-In order to make trust\|me work out of the box, use exactly **one** of the following commands.
+## Include containers to GyroidOS image
+These commands install guest operating systems and containers (e.g. the IDS container) to your GyroidOS platform.
+In order to make GyroidOS work out of the box, use exactly **one** of the following commands.
 Experienced users may choose to include all containers. However this will require manual configuration of the platform.
 
 Build and include the minimal core container
@@ -100,15 +100,15 @@ Build and include the docker-converter image
 bitbake multiconfig:container:docker-convert
 ```
 
-## Build trust\|me image
-This step builds all necessary packages needed for trust\|me and generates a bootable image that can be deployed to the boot medium of your platform.
+## Build GyroidOS image
+This step builds all necessary packages needed for GyroidOS and generates a bootable image that can be deployed to the boot medium of your platform.
 In order to do so, please refer to the [Deploy section](/deploy/x86)
 
 ```
 bitbake trustx-cml
 ```
 ## Build installer image
-If required, a bootable installer image can be created. This image can be used to boot the target platform and install trust\|me on the internal disk as described in the [Deploy section](/deploy/x86)
+If required, a bootable installer image can be created. This image can be used to boot the target platform and install GyroidOS on the internal disk as described in the [Deploy section](/deploy/x86)
 > Currently, the installer medium is only available for x86 platforms
 
 ```
@@ -119,7 +119,7 @@ bitbake multiconfig:installer:trustx-installer
 ## Build keytool image for UEFI Secure Boot configuration
 > x86 UEFI specific
 
-Create a bootable image containing the KeyTool and the trust\|me secure boot keys.
+Create a bootable image containing the KeyTool and the GyroidOS secure boot keys.
 This image can be used to configure secure boot on your platform as described in section [Deploy](/deploy/x86).
 ```
 bitbake trustx-keytool
@@ -136,7 +136,7 @@ bitbake -f trustx-cml-initramfs
 ```
 
 #### Persistently
-The trust|me build system applies some kernel config fragments to the defconfig of your chosen ARCH by default.
+The GyroidOS build system applies some kernel config fragments to the defconfig of your chosen ARCH by default.
 After setting up the yocto environment the fragments are located in subdirectories of ```<ws>/trustme/build/yocto/```.
 
 The following subdirectories contain the actual fragments which are applied in the same order as they are listed below:
@@ -154,7 +154,7 @@ Keep the ordering of the fragment application in mind to ensure no intended chan
 sbsign --key test_certificates/ssig_subca.key \
       --cert test_certificates/ssig_subca.cert \
       --output linux.sigend.efi \
-      ws-yocto/out-yocto/tmp/deploy/images/trustx-corei7-64/cml-kernel/bzImage-initramfs-trustx-corei7-64.bin
+      ws-yocto/out-yocto/tmp/deploy/images/genericx86-64/cml-kernel/bzImage-initramfs-igenericx86-64.bin
 ```
 
 In order to boot the signed kernel using UEFI, it should be placed as /EFI/BOOT/BOOTX64.EFI on the UEFI system partition.
