@@ -36,7 +36,7 @@ Now the trust\|me image can be booted as follows:
 kvm -m 4096 -bios OVMF.fd -serial mon:stdio \
     -device virtio-rng-pci \
     -device virtio-scsi-pci,id=scsi \
-    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/trustx-corei7-64/trustme_image/trustmeimage.img,format=raw \
+    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/genericx86-64/trustme_image/trustmeimage.img,format=raw \
     -device scsi-hd,drive=hd1 -drive if=none,id=hd1,file=containers.btrfs,format=raw
 ```
 
@@ -69,7 +69,7 @@ The following example runs a trust\|me image using the TPM emulator and enabling
 kvm -m 4096 -bios OVMF.fd -serial mon:stdio \
     -device virtio-rng-pci \
     -device virtio-scsi-pci,id=scsi \
-    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/trustx-corei7-64/trustme_image/trustmeimage.img,format=raw \
+    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/genericx86-64/trustme_image/trustmeimage.img,format=raw \
     -device scsi-hd,drive=hd1 -drive if=none,id=hd1,file=containers.btrfs,format=raw \
     -net nic -net user,hostfwd=tcp::8181-:8181,hostfwd=tcp::2323-:22 \
     -chardev socket,id=chrtpm,path=/tmp/swtpmqemu/swtpm-sock \
@@ -82,8 +82,8 @@ kvm -m 4096 -bios OVMF.fd -serial mon:stdio \
 ### prerequisites
 We assume you have built the keytool image, see [build](/build/build#build-keytool-image-for-uefi-secure-boot-configuration).     
 Further, we require the OMVF images from the build folder:
-- `tmp/deploy/images/trustx-corei7-64/ovmf.secboot.code.qcow2`
-- `tmp/deploy/images/trustx-corei7-64/ovmf.vars.qcow2`
+- `tmp/deploy/images/genericx86-64/ovmf.secboot.code.qcow2`
+- `tmp/deploy/images/genericx86-64/ovmf.vars.qcow2`
 
 ## Set Platform keys in OVMF
 
@@ -95,9 +95,9 @@ efivars which will persist the secure boot keys.
 kvm -m 4096 -serial mon:stdio \
     -device virtio-rng-pci \
     -device virtio-scsi-pci,id=scsi \
-    -drive if=pflash,format=qcow2,readonly,file=out-yocto/tmp/deploy/images/trustx-corei7-64/ovmf.secboot.qcow2 \
-    -drive if=pflash,format=qcow2,file=out-yocto/tmp/deploy/images/trustx-corei7-64/ovmf.vars.qcow2 \
-    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/trustx-corei7-64/trustme_image/keytoolimage.img,format=raw
+    -drive if=pflash,format=qcow2,readonly,file=out-yocto/tmp/deploy/images/genericx86-64/ovmf.secboot.qcow2 \
+    -drive if=pflash,format=qcow2,file=out-yocto/tmp/deploy/images/genericx86-64/ovmf.vars.qcow2 \
+    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/genericx86-64/trustme_image/keytoolimage.img,format=raw
 ```
 The KeyTool will be launched.
 It should say:
@@ -132,9 +132,9 @@ provisioned OVMF flash image.
 kvm -m 4096 -serial mon:stdio \
     -device virtio-rng-pci \
     -device virtio-scsi-pci,id=scsi \
-    -drive if=pflash,format=qcow2,readonly,file=tmp/deploy/images/trustx-corei7-64/ovmf.secboot.code.qcow2 \
-    -drive if=pflash,format=qcow2,file=tmp/deploy/images/trustx-corei7-64/ovmf.vars.qcow2 \
-    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/trustx-corei7-64/trustme_image/trustmeimage.img,format=raw \
+    -drive if=pflash,format=qcow2,readonly,file=tmp/deploy/images/genericx86-64/ovmf.secboot.code.qcow2 \
+    -drive if=pflash,format=qcow2,file=tmp/deploy/images/genericx86-64/ovmf.vars.qcow2 \
+    -device scsi-hd,drive=hd0 -drive if=none,id=hd0,file=tmp/deploy/images/genericx86-64/trustme_image/trustmeimage.img,format=raw \
     -device scsi-hd,drive=hd1 -drive if=none,id=hd1,file=containers.btrfs,format=raw \
     -net nic -net user,hostfwd=tcp::8181-:8181,hostfwd=tcp::2323-:22 \
 ```
