@@ -17,7 +17,7 @@ and make sure [prerequisites](/build/build#prerequisites) have been met.
 ```
 mkdir ws-yocto
 cd ws-yocto
-repo init -u https://github.com/trustm3/trustme_main.git -b zeus \
+repo init -u https://github.com/trustm3/trustme_main.git -b dunfell \
     -m yocto-x86-genericx86-64.xml
 repo sync -j8
 source init_ws.sh out-yocto x86 genericx86-64
@@ -50,7 +50,7 @@ bitbake trustx-cml
 ```
 mkdir ws-yocto
 cd ws-yocto
-repo init -u https://github.com/trustm3/trustme_main.git -b master \
+repo init -u https://github.com/trustm3/trustme_main.git -b dunfell \
      -m yocto-arm64-raspberrypi3-64.xml
 repo sync -j8
 source init_ws.sh out-yocto arm64 raspberrypi3-64
@@ -63,7 +63,7 @@ bitbake trustx-cml
 ```
 mkdir ws-yocto
 cd ws-yocto
-repo init -u https://github.com/trustm3/trustme_main.git -b master \
+repo init -u https://github.com/trustm3/trustme_main.git -b dunfell \
      -m yocto-arm64-raspberrypi2.xml
 repo sync -j8
 source init_ws.sh out-yocto arm32 raspberrypi2
