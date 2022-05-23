@@ -91,7 +91,8 @@ The GyroidOS software stack runs on following hardware platforms:
 
 |Year|Title|Authors|PDF|
 |--|--------------------|----------|--------|
-| 2018	| An Ecosystem and IoT Device Architecture for Building Trust in the Industrial Data Space | Gerd Brost, Manuel Huber, Michael Weiß, Mykolai Protsenko, Julian Schütte, Sascha Wessel | [https://doi.org/10.1145/3198458.3198459](https://doi.org/10.1145/3198458.3198459)|
+| 2022 | GyroidOS: Packaging Linux with a Minimal Surface | Felix Wruck, Vasil Sarafov, Florian Jakobsmeier, Michael Weiß | [https://doi.org/10.1145/3510547.3517917](https://doi.org/10.1145/3510547.3517917) |
+| 2018 | An Ecosystem and IoT Device Architecture for Building Trust in the Industrial Data Space | Gerd Brost, Manuel Huber, Michael Weiß, Mykolai Protsenko, Julian Schütte, Sascha Wessel | [https://doi.org/10.1145/3198458.3198459](https://doi.org/10.1145/3198458.3198459)|
 |2017 | Freeze & Crypt: Linux Kernel Support for Main Memory Encryption | Manuel Huber, Julian Horsch, Junaid Ali, Sascha Wessel, | [http://dx.doi.org/10.5220/0006378400170030](http://dx.doi.org/10.5220/0006378400170030) |
 | 2015 | A Secure Architecture for Operating System-Level Virtualization on Mobile Devices | Manuel Huber, Julian Horsch, Michael Velten, Michael Weiß, Sascha Wessel | [http://dx.doi.org/10.1007/978-3-319-38898-4_25](http://dx.doi.org/10.1007/978-3-319-38898-4_25) |
 | 2015 | Improving mobile device security with operating system-level virtualization (Journal) | Sascha Wessel, Manuel Huber, Frederic Stumpf, Claudia Eckert | [https://doi.org/10.1016/j.cose.2015.02.005](https://doi.org/10.1016/j.cose.2015.02.005) |
