@@ -37,7 +37,7 @@ bitbake multiconfig:installer:trustx-installer
 ```
 mkdir ws-yocto
 cd ws-yocto
-repo init -u https://github.com/trustm3/trustme_main.git -b master \
+repo init -u https://github.com/trustm3/trustme_main.git -b dunfell \
      -m yocto-arm64-zcu104-zynqmp.xml
 repo sync -j8
 source init_ws.sh out-yocto arm64 zcu104-zynqmp
@@ -64,7 +64,7 @@ bitbake trustx-cml
 mkdir ws-yocto
 cd ws-yocto
 repo init -u https://github.com/trustm3/trustme_main.git -b dunfell \
-     -m yocto-arm64-raspberrypi2.xml
+     -m yocto-arm32-raspberrypi2.xml
 repo sync -j8
 source init_ws.sh out-yocto arm32 raspberrypi2
 bitbake multiconfig:container:trustx-core
