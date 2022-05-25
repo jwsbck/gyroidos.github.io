@@ -2,7 +2,7 @@
 # Site
 
 title: GyroidOS
-url: "https://github.com/trustm3"
+url: "https://github.com/gyroidos"
 baseurl: ""
 google_analytics_key:
 show_full_navigation: true
@@ -12,8 +12,8 @@ kramdown:
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: img/gyroidos-logo.png
 description: This is the GyroidOS project documentation
-githuborg: "https://github.com/trustm3"
-repository: trustme_main
+githuborg: "https://github.com/gyroidos"
+repository: gyroidos
 release_tag: v0.1.1
 author:
   name:
