@@ -57,6 +57,6 @@ encryption to Secure Elements, and for leveraging TEEs for storing cryptographic
 within hardware-isolated boundaries.
 
 A detailed introduction to the core concepts of the OS-Level virtualization
-and separation of privileged instances in GyroidOS is provided in [this slideset](https://github.com/trustm3/trustme_main/raw/master/doc/trustme.pdf).
+and separation of privileged instances in GyroidOS is provided in [this slideset](https://github.com/gyroidos/gyroidos/raw/master/doc/trustme.pdf).
 The document is centered around the legacy Android-based version of trust\|me, however the
 core concepts apply likewise to the current version.

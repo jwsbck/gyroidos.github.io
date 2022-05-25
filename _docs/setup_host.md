@@ -8,7 +8,7 @@ order: 3
 - TOC
 {:toc}
 
-This page describes how to setup the build environment for the trust\|me system.
+This page describes how to setup the build environment for the GyroidOS system.
 The instructions were tested on Debian Stretch (x86-64).
 You can either build GyroidOS natively on your host or use a preconfigured, Docker-based build environment.
 Choose the option that best fits your requirements.
@@ -23,7 +23,7 @@ sudo apt-get install repo
 ```
 mkdir ~/ws-yocto
 cd ~/ws-yocto
-repo init -u https://github.com/trustm3/trustme_main.git -b master -m <manifest file>.xml
+repo init -u https://github.com/gyroidos/gyroidos.git -b dunfell -m <manifest file>.xml
 repo sync -j8
 ```
 3. Build Docker image
