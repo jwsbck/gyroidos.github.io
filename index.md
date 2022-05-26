@@ -18,9 +18,9 @@ Linux-specific features like namespaces, cgroups and
 capabilities to provide isolation of different Guest
 Operating System (GuestOS) stacks on top of a single, shared Linux kernel.
 In contrast to other _container_ solutions like Docker,
-trust\|me provides a small software stack footprint and additional
+GyroidOS provides a small software stack footprint and additional
 separation of privileged instances.
-The illustration below shows the system architecture of trust\|me.
+The illustration below shows the system architecture of GyroidOS.
 
 <img alt="trustme system architecture" src="img/architecture-tee-left.png" width="75%">
 
@@ -34,7 +34,7 @@ Furthermore, special platform security features are
 directly integrated into the virtualizaion layer in form of services
 utilizing a TPM chip and other platform
 dependent hardware-based security mechanisms.
-In a nutshell, trust\|me offers the following security features and benefits:
+In a nutshell, GyroidOS offers the following security features and benefits:
 
 ### Security features
 * Solid container isolation based on modularized OS-level virtualization layer
@@ -63,10 +63,10 @@ container. There is also a [quickbuild option](build/quickbuild) and a tutorial 
 GuestOSs](/build/guestos). Once trust\|me is built, you might want to [test it on QEMU/KVM](/deploy/qemu)
 before deploying it onto your target platform (see Deploy options). We provide an overview on how to [manage
 and configure a deployed trust|me system](/operate/control).
-We also provide descriptions on how to securely [roll-out a platform running trust|me](/provisioning) using our proposed [PKI](/pki).
+We also provide descriptions on how to securely [roll-out a platform running GyroidOS](/provisioning) using our proposed [PKI](/pki).
 
 The remainder of this page highlights possible use cases, supported platforms and related scientific publications.
-For more information on trust\|me and OS-Level virtualization, [read our background page](/background).
+For more information on GyroidOS and OS-Level virtualization, [read our background page](/background).
 
 ## Use cases
 
