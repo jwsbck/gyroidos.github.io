@@ -1,5 +1,4 @@
 ---
-
 title: Overview
 ---
 
@@ -22,7 +21,7 @@ GyroidOS provides a small software stack footprint and additional
 separation of privileged instances.
 The illustration below shows the system architecture of GyroidOS.
 
-<img alt="trustme system architecture" src="img/architecture-tee-left.png" width="75%">
+<img alt="gyroidos system architecture" src="img/architecture-tee-left.png" width="75%">
 
 User interaction (e.g. admin access through ssh) may not directly end up in the
 privileged root namespace. For that purpose a less privileged _core container_
@@ -57,13 +56,13 @@ In a nutshell, GyroidOS offers the following security features and benefits:
 * PKI support for software signing and device identity
 
 ### Getting started
-To get started, first [set up the build environment](/setup_host).
-After that, you can [build the trust|me base system](/build/build), i.e., kernel, virtualization layer and the core
+To get started, first [set up the build environment](/build/setup_host).
+After that, you can [build the GyroidOS base system](/build/build), i.e., kernel, virtualization layer and the core
 container. There is also a [quickbuild option](build/quickbuild) and a tutorial how to [create your custom
-GuestOSs](/build/guestos). Once trust\|me is built, you might want to [test it on QEMU/KVM](/deploy/qemu)
+GuestOSs](/build/guestos). Once GyroidOS is built, you might want to [test it on QEMU/KVM](/deploy/qemu)
 before deploying it onto your target platform (see Deploy options). We provide an overview on how to [manage
-and configure a deployed trust|me system](/operate/control).
-We also provide descriptions on how to securely [roll-out a platform running GyroidOS](/provisioning) using our proposed [PKI](/pki).
+and configure a deployed GyroidOS system](/operate/control).
+We also provide descriptions on how to securely [roll-out a platform running GyroidOS](/operate/provisioning) using our proposed [PKI](/pki).
 
 The remainder of this page highlights possible use cases, supported platforms and related scientific publications.
 For more information on GyroidOS and OS-Level virtualization, [read our background page](/background).

@@ -1,7 +1,7 @@
 ---
 title: Base System
 category: Build
-order: 2
+order: 3
 ---
 
 # Build GyroidOS
@@ -16,7 +16,7 @@ If you just want to try out GyroidOS the core flavour is the best option for you
 ## Prerequisites
 
 The following prerequisites are necessary for **all** GyroidOS flavours. Please make sure your build host meets these requirements:
-   * Build host configuration as described in section [Setup Host](/setup_host)
+   * Build host configuration as described in section [Setup Host](/build/setup_host)
    * Sufficient hard disk space, at least 100 GB
    * Sufficient RAM. We tested the build on a VM having 4 GB RAM. However, a build host with less RAM should also work.
 

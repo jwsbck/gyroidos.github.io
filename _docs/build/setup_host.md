@@ -1,7 +1,7 @@
 ---
 title: Setup Host
-category: General
-order: 3
+category: Build
+order: 2
 ---
 
 # Setup build environment

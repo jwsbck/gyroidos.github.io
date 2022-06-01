@@ -1,7 +1,7 @@
 ---
 title: Smartphones (depct'd)
 category: Build
-order: 4
+order: 5
 ---
 
 # Android Build for Smartphones (deprecated)

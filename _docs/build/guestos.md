@@ -1,7 +1,7 @@
 ---
 title: Guest OS
 category: Build
-order: 3
+order: 4
 ---
 
 # Create new Guest Operating Systems
@@ -17,7 +17,7 @@ This option mainly targets more advanced users. For information on Yocto, please
 
 ### Preparing the build environment
 
-First, your build host needs to be prepared as described in section [Setup Host](\setup_host)
+First, your build host needs to be prepared as described in section [Setup Host](/build/setup_host)
 
 For the purpose of building both the Base system and guest Operating Systems, follow the instructions provided in chapter [Build Base System](/build/build) and skip the rest of this subsection.
 

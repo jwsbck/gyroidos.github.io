@@ -1,6 +1,6 @@
 ---
 title: Rollout
-category: General
+category: Operate
 order: 5
 ---
 

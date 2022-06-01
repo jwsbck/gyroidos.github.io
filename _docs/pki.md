@@ -52,7 +52,7 @@ communication with a backend.
 # Generating the PKI
 
 This part covers the building of the PKI. The deployment of trust anchors and signing of CSRs is covered on
-the [roll-out page](/provisioning).
+the [roll-out page](/operate/provisioning).
 
 ### Build-time generation 
 
