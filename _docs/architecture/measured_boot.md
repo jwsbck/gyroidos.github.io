@@ -24,8 +24,8 @@ As shown in the figure above, the measured values (hashes) of the individual par
 Registers PCR4 and PCR5 usually store the measured value of the bootloader and its configuration, as shown in [Table PCR definitions](#table-pcr-definitions)
 In our case, the measured value of the EFI-binaries are stored here, which include the Linux kernel and the whole virtualization layer (initrd).
 PCR8 and PCR9 are unused and are initialized to 0.
-The Register PCR10 is used by the Linux kernel to store a "Measurement List" of the kernel modules via Integrity Measurement Architecture (IMA).
-PCR11 is used by the virtualization layer to store a measurement list of the GuestOS images (read-only root file systems) used by containers analogous to the IMA.
+The Register PCR10 is used by the Linux kernel to store a "Measurement List" ML<sub>Mod</sub> of the kernel modules via Integrity Measurement Architecture (IMA).
+PCR11 is used by the virtualization layer to store a measurement list ML<sub<OS></sub> of the GuestOS images (read-only root file systems) used by containers analogous to the IMA.
 
 ### Table PCR definitions
 
@@ -52,15 +52,14 @@ This can be done by a component of the operating system which reads the attestat
 In the end, the attacker could still use an old value to mislead the server to believe the system state is trusted.
 That is why the attestation includes that the server sends a "Challenge" as nonce to the attestation client.
 The client forwards the nonce to the TPM and requests and attestation result called "Quote" from the TPM.
-The TPM combines the stored PCR value with the nonce and signs the result with a private attestation key PrK<sub>ATT</sub> as seen in he figure above, which represents the attestation result for the client.
+The TPM combines the stored PCR value with the nonce and signs the result with a private attestation key PrK<sub>ATT</sub> as seen in the figure above, which represents the attestation result for the client.
 Through this, the server can verify the authenticity of the attestation result and conclude the system state present at the start of the system.
-
-By providing a challenge, a client _Verifier_ can request a Quote from the remote TPM via a serving
-_Prover_'s _tpm2d_.
-The verification of Quotes is implemented by the verification tool _rattestation_.
+To be able to verify the IMA style measurements the corresponding measurement lists ML<sub>Mod</sub> for
+modules and ML<sub>OS</sub> for GuestOS images needs to be
+included in the attestation response.
 
 In the following, the protocol sequence between a _Verifier_ and a _Prover_ is shown.
-The attestation server depicts the _Verifier_ and the attestation client depicts the _Prover_
+The attestation server represents the _Verifier_ and the attestation client represents the _Prover_
 in the protocol:
 
 1. _Verifier_: create Nonce<sub>v</sub>
