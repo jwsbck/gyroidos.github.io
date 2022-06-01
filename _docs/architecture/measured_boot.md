@@ -67,7 +67,7 @@ in the protocol:
 3. _Prover_ : Retrieve quoted and signature from TPM (TPMS\_ATTEST)
     * quoted := {magic,..,Nonce<sub>V</sub>,pcrSelect,pcrDigest},
     * signature := {quoted}<sup>PrK<sub>ATT</sub></sup>
-    * concatenate ML := ML<sub>Mod</sub>\|\|ML<sub>Comp</sub>
+    * concatenate ML := ML<sub>Mod</sub>\|\|ML<sub>OS</sub>
 4. _Prover_ -> _Verifier_: AttResponse[quoted,signature,pcr\_values[0]..[11],Cert<sub>Prover</sub>)],ML
 5. _Verifier_:
     * verify Cert<sub>Prover</sub> and validate {quoted}<sup>PrK<sub>ATT</sub></sup>
