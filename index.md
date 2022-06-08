@@ -7,7 +7,7 @@ title: Overview
 - TOC
 {:toc}
 
-GyroidOS is a
+GyroidOS (/dʒaɪrɔɪd/) is a 
 multi-arch OS-level virtualization solution with additional
 focus on platform security based on hardware features.
 It aims to support certification processes according to certain industry
