@@ -1,5 +1,5 @@
 ---
-title: Containger configuration
+title: Container configuration
 category: Operate
 order: 2
 ---
