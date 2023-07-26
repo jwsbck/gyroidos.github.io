@@ -23,7 +23,7 @@ sudo apt-get install repo
 ```
 mkdir ~/ws-yocto
 cd ~/ws-yocto
-repo init -u https://github.com/gyroidos/gyroidos.git -b dunfell -m <manifest file>.xml
+repo init -u https://github.com/gyroidos/gyroidos.git -b kirkstone -m <manifest file>.xml
 repo sync -j8
 ```
 3. Build Docker image
