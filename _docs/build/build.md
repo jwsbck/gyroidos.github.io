@@ -38,7 +38,7 @@ Please refer to the following list to select the correct manifest file:
 |**yocto-x86-genericx86-64.xml**|Any x86 based plattform supporting UEFI
 
 ```
-repo init -u https://github.com/gyroidos/gyroidos.git -b dunfell -m <manifest file>
+repo init -u https://github.com/gyroidos/gyroidos.git -b kirkstone -m <manifest file>
 repo sync -j8
 ```
 
