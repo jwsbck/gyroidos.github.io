@@ -24,7 +24,7 @@ apt-get install git build-essential unzip re2c pkg-config check \
 ### Protobuf-c-text
 To install protobuf-c-text, run the following commands:
 ```
-git clone https://github.com/trustm3/external_protobuf-c-text
+git clone https://github.com/gyrdoidos/external_protobuf-c-text
 cd external_protobuf-c-text/
 ./autogen.sh
 ./configure --enable-static=yes
@@ -34,9 +34,9 @@ ldconfig
 ```
 
 ## Installation
-1. Clone  https://github.com/trustm3/device_fraunhofer_common_cml 
-2. Compile and install the neccesary components with 
+Clone, compile and install the neccesary components with
 ```
+git clone https://github.com/gyroidos/cml
 make -f Makefile_lsb 
 sudo make -f Makefile_lsb install
 ```
