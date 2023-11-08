@@ -32,19 +32,6 @@ also execute the following command:
 bitbake multiconfig:installer:trustx-installer
 ```
 
-## Xilinx Zynq ZCU104 platform
-
-```
-mkdir ws-yocto
-cd ws-yocto
-repo init -u https://github.com/gyroidos/gyroidos.git -b kirkstone \
-     -m yocto-arm64-zcu104-zynqmp.xml
-repo sync -j8
-source init_ws.sh out-yocto arm64 zcu104-zynqmp
-bitbake multiconfig:container:trustx-core
-bitbake trustx-cml
-```
-
 ## Raspberry Pi3
 
 ```
@@ -54,6 +41,19 @@ repo init -u https://github.com/gyroidos/gyroidos.git -b kirkstone \
      -m yocto-arm64-raspberrypi3-64.xml
 repo sync -j8
 source init_ws.sh out-yocto arm64 raspberrypi3-64
+bitbake multiconfig:container:trustx-core
+bitbake trustx-cml
+```
+
+## Raspberry Pi2
+
+```
+mkdir ws-yocto
+cd ws-yocto
+repo init -u https://github.com/gyroidos/gyroidos.git -b kirkstone \
+     -m yocto-arm32-raspberrypi2.xml
+repo sync -j8
+source init_ws.sh out-yocto arm32 raspberrypi2
 bitbake multiconfig:container:trustx-core
 bitbake trustx-cml
 ```
