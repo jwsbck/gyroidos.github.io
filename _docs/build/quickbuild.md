@@ -98,6 +98,19 @@ bitbake multiconfig:guestos:gyroidos-core
 bitbake gyroidos-cml
 ```
 
+## TQ-Systems TQMlx2160a
+
+```
+mkdir ws-yocto
+cd ws-yocto
+repo init -u https://github.com/gyroidos/gyroidos.git -b main \
+     -m yocto-arm64-tqmlx2160a.xml
+repo sync -j8
+source init_ws.sh out-yocto arm64 tqmlx2160a
+bitbake multiconfig:guestos:gyroidos-core
+bitbake gyroidos-cml
+```
+
 ## BeagleV-Fire
 
 ```
